@@ -1,0 +1,27 @@
+
+<body>
+    <form action="/tickets/<%=ticket.id%>/edit" method="POST">
+        <fieldset>
+        <legend>Edit Ticket</legend>
+        <p>
+            <label>Event Name:</label>
+            <input type="text" name="event_name"  value="<%= ticket.event_name %>" />
+        </p>
+        <p>
+            <label>Event Date:</label>
+            <input type="date" name="event_date" value="<%= ticket.event_date %>"/>
+        </p>
+        <p>
+            <label>Type:</label>
+            <input type="text" name="type" value="<%= ticket.type %>"/>
+        </p>
+        <p>
+            <label>Price:</label>
+            <input type="text" name="price" value="<%= ticket.price %>" />
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Send" />
+        </p>
+        </fieldset>
+    </form>
+</body>
