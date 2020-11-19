@@ -1,0 +1,20 @@
+[
+  {
+    "event_name": "Hammer Sonic 2021",
+    "event_date": "13 Januari 2021",
+    "type": "Premium",
+    "price": 750000
+  },
+  {
+    "event_name": "Synchronize",
+    "event_date": "28 Desember 2020",
+    "type": "Regular",
+    "price": 275000
+  },
+  {
+    "event_name": "Djakarta Warehouse Project",
+    "event_date": "13 Desember 2020",
+    "type": "Platinum",
+    "price": 1500000
+  }
+]

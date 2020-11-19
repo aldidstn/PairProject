@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocknation</title>
+</head>
+
+<body>
+  <h1>Buyer List</h1>
+
+  <table border="1">
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Username</th>
+      <th>Option</th>
+    </tr>
+
+    <% data.forEach(el => {%>
+    <tr>
+      <td><%= el.name%></td>
+      <td><%= el.email%></td>
+      <td><%= el.phone_number%></td>
+      <td><%= el.username%></td>
+      <td>
+        <a href="/buyers/edit/<%= el.id %>">Edit Data</a> |
+        <a href="/buyers/delete/<%= el.id %>">Delete</a>
+      </td>
+    </tr>
+    <%})%>
+  </table>
+</body>
+
+</html>
