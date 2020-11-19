@@ -18,6 +18,28 @@ class BuyerControl {
       })
   }
 
+  static addForm(req, res) {
+    res.render('add-form')
+  }
+
+  static created(req, res) {
+    let data = {
+      name: req.body.name,
+      email: req.body.email,
+      phone_number: req.body.phone_number,
+      username: req.body.username,
+      password: req.body.password
+    }
+
+    Buyer.create(data)
+      .then(() => {
+        res.redirect('/buyers')
+      })
+      .catch(err => {
+        res.send(err)
+      })
+  }
+
   static editForm(req, res) {
     const id = +req.params.id
     Buyer.findByPk(id)
