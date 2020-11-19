@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocknation</title>
+</head>
+<body>
+  <h1>Edit Data</h1>
+
+<form action="/buyers/edit/<%= data.id%>" method="POST">
+  <label for="name">Name</label><br>
+  <input type="text" name="name" value="<%= data.name %>">
+  <br><br>
+
+  <label for="email">Email</label><br>
+  <input type="text" name="email" value="<%= data.email %>">
+  <br><br>
+
+  <label for="phone_number">Phone Number</label><br>
+  <input type="text" name="phone_number" value="<%= data.phone_number %>">
+  <br><br>
+
+  <button type="submit">Submit</button>
+</form>
+</body>
+</html>

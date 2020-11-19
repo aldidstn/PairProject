@@ -2,6 +2,7 @@
 const {
   Model
 } = require('sequelize');
+const { ticketCode, serialNumber } = require('../helpers/helper')
 module.exports = (sequelize, DataTypes) => {
   class TicketBuyer extends Model {
     /**
@@ -20,6 +21,11 @@ module.exports = (sequelize, DataTypes) => {
     TicketId: DataTypes.INTEGER,
     ticket_number: DataTypes.INTEGER
   }, {
+    hooks: {
+      beforeCreate(TicketBuyer) {
+        TicketBuyer.ticket_number = ticketCode(TicketId.type) + serialNumber()
+      }
+    },
     sequelize,
     modelName: 'TicketBuyer',
   });
