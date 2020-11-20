@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rocknation</title>
+</head>
+
+<body>
+  <h1>Ticket List</h1>
+  <table border="1">
+    <tr>
+      <th>Event Name</th>
+      <th>Event Date</th>
+      <th>Ticket Type</th>
+      <th>Price</th>
+      <th>Action</th>
+    </tr>
+
+    <% data.forEach(el => { %>
+      <tr>
+        <td><%= el.dataValues.event_name %></td>
+        <td><%= el.dataValues.event_date %></td>
+        <td><%= el.dataValues.type %></td>
+        <td><%= el.dataValues.price %></td>
+        <td>
+          <a href="/tickets/buy/<%= el.dataValues.id %>">Buy Ticket</a>
+        </td>
+      </tr>
+    <% }) %>
+  </table>
+</body>
+
+</html>

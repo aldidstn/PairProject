@@ -1,5 +1,5 @@
 class HomeController {
-    static homePage(req, res) {
+    static home(req, res) {
         res.render('home')
     }
 }

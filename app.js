@@ -1,9 +1,9 @@
 const express = require('express')
-const router = require('./routes')
+const router = require('./routes/index')
 const session = require('express-session');
 const app = express()
 const port = 3000
-const router = require('./router/router')
+// const router = require('./router/router')
 
 
 app.set('view engine', 'ejs')
