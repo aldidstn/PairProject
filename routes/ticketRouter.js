@@ -2,6 +2,7 @@ const router = require('express').Router()
 const Controller = require('../controllers/Controller')
 
 router.get('/', Controller.showTicket)
+router.get('/buy', Controller.buyTicket)
 router.get('/add', Controller.addForm)
 router.post('/add', Controller.addPost)
 router.get('/:id/edit', Controller.editForm)

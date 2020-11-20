@@ -1,4 +1,4 @@
-const { Ticket } = require('../models')
+const { Ticket,Buyer ,TicketBuyer } = require('../models')
 
 class Controller {
     static loginForm(req, res) {
@@ -106,6 +106,22 @@ class Controller {
                 // res.redirect('/tickets')
             })
             .catch((err) => {
+                res.send(err)
+            })
+    }
+
+    static buyTicket(req, res) {
+        TicketBuyer.findAll({
+            where: {
+                TicketId 
+            },
+            include: ['Buyers']
+        })
+            .then(data => {
+                console.log(data);
+                res.render('buyer-ticket', {data})
+            })
+            .catch(err => {
                 res.send(err)
             })
     }
